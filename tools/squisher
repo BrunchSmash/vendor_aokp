@@ -159,7 +159,7 @@ rm -rf $REPACK/ota/recovery
 #MODVERSION=`sed -n -e'/ro\.modversion/s/^.*=//p' $REPACK/ota/system/build.prop`
 VERSION=`sed -n -e'/ro.aokp.version/s/^.*=//p' $REPACK/ota/system/build.prop`
 MODVERSION="$VERSION"
-OUTFILE=$OUT/$MODVERSION.date +%g:%i.zip
+OUTFILE=$OUT/$MODVERSION.date +%g_%i.zip
 
 # Pack it up and sign
 printf "Zipping package..."
